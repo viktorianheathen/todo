@@ -1,0 +1,205 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: cursive;
+}
+.todo_main
+{
+	height: 100%;
+	background-color: paleturquoise;
+	position: relative;
+}
+.todo_box
+{
+	width: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	top: 200px;
+	background-color: #fff;
+	box-shadow: 0 0 10px grey;
+	-webkit-box-shadow: 0 0 10px grey;
+	border-radius: 7px;
+}
+.todo_title
+{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	background-color: palevioletred;
+	color: #fff;
+	border-radius: 7px 7px 0 0;
+}
+.todo_body
+{
+	padding: 20px;
+}
+.todo_body ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.todo_body ul li
+{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	margin: 10px 0;
+	height: 30px
+}
+.todo_label
+{
+	width: 60%;
+	margin-left: 10px;
+	margin-right: 20px;
+	color: palevioletred;
+	font-weight: bold;
+}
+.todo_label.deleted
+{
+	color: silver;
+	text-decoration: line-through;
+}
+.edit_item
+{
+	background-color: palevioletred;
+	color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: none;
+	font-family: cursive;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	height: 30px;
+}
+.edit_item:hover
+{
+	background-color: paleturquoise;
+}
+.delete_item
+{
+	color: palevioletred;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid palevioletred;
+	font-family: cursive;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	height: 30px;
+	background-color: #fff;
+	margin-left: 10px;
+}
+.delete_item:hover
+{
+	background-color: palevioletred;
+	color: #fff;
+}
+.todo_check_outer
+{
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	top: -1px;
+}
+.tumbler
+{
+	content: "";
+	display: block;
+	width: 25px;
+	height: 15px;
+	background-color: palevioletred;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.tumbler:before
+{
+	content: "";
+	display: block;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: inset 0 0 10px silver;
+	-webkit-box-shadow: inset 0 0 10px silver;
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.todo_check_outer input
+{
+	display: none;
+}
+.todo_check_outer input:checked  + .tumbler
+{
+	background-color: paleturquoise;
+}
+.todo_check_outer input:checked  + .tumbler:before
+{
+	left: 10px;
+}
+.todo_form_box
+{
+	width: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	top: 100px;
+	background-color: #fff;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px grey;
+	-webkit-box-shadow: 0 0 10px grey;
+}
+.todo_form_box form
+{
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.todo_form_box form input
+{
+	height: 30px;
+	padding: 0 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid paleturquoise;
+	box-shadow: inset 0 0 10px paleturquoise;
+	-webkit-box-shadow: inset 0 0 10px paleturquoise;
+}
+.todo_form_box form button
+{
+	background-color: palevioletred;
+	color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: none;
+	font-family: cursive;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.todo_form_box form button:hover
+{
+	background-color: paleturquoise;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TO-DO.js</title>
+	
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="todo_main">
+		<div class="todo_box">
+			<div class="todo_title">
+				<span>TO-DO.JS</span>
+			</div>
+			<div class="todo_body">
+				<ul>
+					<li class="todo_item">
+						<label class="todo_check_outer">
+							<input type="checkbox" />
+							<span class="tumbler"></span>
+						</label>
+						<span class="todo_label">Имя таска</span>
+						<button type="button" class="edit_item">Изменить</button>
+						<button type="button" class="delete_item">Удалить</button>
+					</li>
+					<li class="todo_item">
+						<label class="todo_check_outer">
+							<input type="checkbox" />
+							<span class="tumbler"></span>
+						</label>
+						<span class="todo_label">Имя таска</span>
+						<button type="button" class="edit_item">Изменить</button>
+						<button type="button" class="delete_item">Удалить</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="todo_form_box">
+			<form id="todo_form">
+				<input type="text" value="" />
+				<button>Создать запись</button>
+			</form>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
